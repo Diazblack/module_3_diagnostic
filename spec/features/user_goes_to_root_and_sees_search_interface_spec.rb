@@ -3,6 +3,7 @@ require "rails_helper"
 describe "User see search interface " do
   it "should see and a form" do
     # As a user
+    # stub_stations_api_call
     user = User.create(name: "Will", email: "Will@wi.com", password: "123454")
     # When I visit "/"
     visit "/"
@@ -17,7 +18,7 @@ describe "User see search interface " do
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
     expect(page).to have_content("Stations")
 
-    expect(page).to have_css("station", 8)
+    expect(page).to have_css("station")
     # And the stations should be limited to Electric and Propane
 
     # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
