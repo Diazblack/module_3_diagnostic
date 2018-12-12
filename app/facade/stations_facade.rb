@@ -8,7 +8,6 @@ class StationsFacade
     response = conn.get("/api/alt-fuel-stations/v1/nearest.json?radius=6.0&location=#{@zip.to_i}&fuel_type=ELEC&fuel_type=LPG&limit=10")
 
     js = JSON.parse(response.body, symbolize_names: true)
-
     stations = js[:fuel_stations].map do |station|
       Station.new(station)
     end

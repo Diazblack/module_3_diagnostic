@@ -1,13 +1,13 @@
 class Station
 
-  attr_reader @name,
-              @address,
-              @fuel_type,
-              @distance,
-              @access_time
+  attr_reader :name,
+              :address,
+              :fuel_type,
+              :distance,
+              :access_time
 
   def initialize(data)
-    require "pry"; binding.pry
+
     @name = data[:station_name]
     @address = data[:street_address]
     @fuel_type = data[:fuel_type_code]
