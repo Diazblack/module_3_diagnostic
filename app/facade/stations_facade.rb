@@ -13,6 +13,7 @@ class StationsFacade
     Faraday.new(:url => "'https://developer.nrel.gov/api/alt-fuel-stations.v1?limit=10") do |f|
       f.headers['X-Api-Key'] = ENV['X-API-KEY']
       f.adapter Faraday.default_adapter
-    end 
+      
+    end
   end
 end
