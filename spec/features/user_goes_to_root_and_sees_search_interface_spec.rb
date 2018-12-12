@@ -3,8 +3,8 @@ require "rails_helper"
 describe "User see search interface " do
   it "should see and a form" do
     # As a user
-    user = create(:user)
-    allow_any_instance_of().to receive(:name).and_return("Wibble")
+    user = User.create(name: "Will", email: "Will@wi.com", password: "123454")
+
     # When I visit "/"
     visit "/"
     # And I fill in the search form with 80203 (Note: Use the existing search form)
