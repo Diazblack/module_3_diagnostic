@@ -1,4 +1,5 @@
 class SearchController < ApplicationController
   def index
-  end 
+    @facade = StationsFacade.new(params[:q])
+  end
 end

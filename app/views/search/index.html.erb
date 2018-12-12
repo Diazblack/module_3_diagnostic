@@ -1,4 +1,12 @@
 <section>
     <h1>Stations</h1>
-    
+    <% @facade.stations.each do |station| %>
+      <div class="station">
+        <%= station.name %>
+        <%= station.address %>
+        <%= station.fuel_type %>
+        <%= station.distance %>
+        <%= station.access_time %>
+      </div>
+    <% end %>
 </section>
